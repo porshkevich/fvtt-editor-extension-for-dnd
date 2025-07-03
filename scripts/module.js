@@ -464,7 +464,7 @@ class EditorEnrichersExtension {
 	}
 
 	static _getAbilityChoices() {
-		return lib.mapObject(CONFIG.DND5E.abilities, lib.mapByLabel);
+		return lib.mapObject(CONFIG.DND5E.abilities, lib.mapByNameOrLabel);
 	}
 
 	static _getAbilityChoicesWithEmpty() {
@@ -475,7 +475,7 @@ class EditorEnrichersExtension {
 	}
 
 	static _getSkillChoices() {
-		return lib.mapObject(CONFIG.DND5E.skills, lib.mapByLabel);
+		return lib.mapObject(CONFIG.DND5E.skills, lib.mapByNameOrLabel);
 	}
 
 	_getToolChoices() {
@@ -485,7 +485,7 @@ class EditorEnrichersExtension {
 	_getDamageTypeChoices() {
 		return lib.mapObject(
 			CONFIG.DND5E.damageTypes,
-			this.displayFallbackHelpers ? lib.mapByLabelConcatKey : lib.mapByLabel
+			this.displayFallbackHelpers ? lib.mapByLabelConcatKey : lib.mapByNameOrLabel
 		);
 	}
 
@@ -499,14 +499,14 @@ class EditorEnrichersExtension {
 	_getConditionChoices() {
 		return lib.mapObject(
 			lib.filterObject(CONFIG.DND5E.conditionTypes, lib.filterByReferenceExist),
-			this.displayFallbackHelpers ? lib.mapByLabelConcatKey : lib.mapByLabel,
+			this.displayFallbackHelpers ? lib.mapByLabelConcatKey : lib.mapByNameOrLabel,
 		);
 	}
 
 	_getSpellSchoolChoices() {
 		return lib.mapObject(
 			CONFIG.DND5E.spellSchools,
-			this.displayFallbackHelpers ? lib.mapByLabelConcatFullKey : lib.mapByLabel,
+			this.displayFallbackHelpers ? lib.mapByLabelConcatFullKey : lib.mapByNameOrLabel,
 		);
 	}
 

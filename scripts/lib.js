@@ -6,11 +6,11 @@ export function filterObject(obj, fn) {
 	return Object.fromEntries(Object.entries(obj).filter(fn));
 }
 
-export const mapByLabel = ([k, v]) => [k, v.label];
+export const mapByNameOrLabel = ([k, v]) => [k, v.name ?? v.label];
 
-export const mapByLabelConcatKey = ([k, v]) => [k, v.label.concat(" / ", capitalize(k))];
+export const mapByLabelConcatKey = ([k, v]) => [k, (v.name ?? v.label).concat(" / ", capitalize(k))];
 
-export const mapByLabelConcatFullKey = ([k, v]) => [k, v.label.concat(" / ", capitalize(v.fullKey))];
+export const mapByLabelConcatFullKey = ([k, v]) => [k, (v.name ?? v.label).concat(" / ", capitalize(v.fullKey))];
 
 export const filterByReferenceExist = ([, v]) => "reference" in v;
 
