@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 0.5.0
+
+- Add support DnD system version 5.3.3 and Foundry 14
+
 ## Version 0.4.0
 
 - Add support DnD system version 5 and Foundry 13

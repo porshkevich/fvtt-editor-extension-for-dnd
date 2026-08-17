@@ -167,21 +167,21 @@ class EditorEnrichersExtension {
 				{
 					action: "enrichers-healing",
 					title: i18nFormat("EEFDND.AddEnricher", {
-						enricher: i18n("DND5E.Healing"),
+						enricher: i18n("DND5E.ActionHeal"),
 					}),
 					cmd: this._insertHealingPrompt.bind(this, pmmenu),
 				},
 				{
 					action: "enrichers-condition",
 					title: i18nFormat("EEFDND.AddEnricher", {
-						enricher: i18n("DND5E.Rule.Type.Condition"),
+						enricher: i18n("DND5E.Conditions"),
 					}),
 					cmd: this._insertConditionPrompt.bind(this, pmmenu),
 				},
 				{
 					action: "enrichers-spellSchool",
 					title: i18nFormat("EEFDND.AddEnricher", {
-						enricher: i18n("DND5E.SpellSchool"),
+						enricher: i18n("EEFDND.SpellSchools"),
 					}),
 					cmd: this._insertSpellSchoolPrompt.bind(this, pmmenu),
 				},

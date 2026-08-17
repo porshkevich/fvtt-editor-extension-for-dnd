@@ -14,6 +14,7 @@
 				"name": "Display translate helpers in some drop-down menus",
 				"hint": "Adds original names (in English) of statuses, schools of magic, damage types, tools"
 			}
-		}
+		},
+		"SpellSchools": "Spell Schools"
 	}
 }
